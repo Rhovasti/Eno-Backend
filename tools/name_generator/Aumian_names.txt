@@ -1,0 +1,10 @@
+Smith Family-18 Priest
+Smith Family-15 Guard
+Smith Family-30 Builder
+Merchant Family-19 Guard
+Farmer Family-38 Guard
+Smith Family-3 Guard
+Farmer Family-42 Builder
+Merchant Family-39 Guard
+Smith Family-31 Guard
+Merchant Family-3 Priest

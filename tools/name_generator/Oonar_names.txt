@@ -1,0 +1,9 @@
+Fresh Soft
+Decay Skeletal
+Bloated Soft
+Bloated Rigid
+Decay Soft
+Fresh Rigid
+Fresh Skeletal
+Bloated Skeletal
+Decay Rigid

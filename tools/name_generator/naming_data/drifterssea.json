@@ -1,0 +1,17 @@
+{
+    "seasons": [
+        "Winter",
+        "Summer",
+        "Spring"
+    ],
+    "water_forms": [
+        "Wave",
+        "Tide",
+        "Current"
+    ],
+    "clan_names": [
+        "ClanA",
+        "ClanB",
+        "ClanC"
+    ]
+}

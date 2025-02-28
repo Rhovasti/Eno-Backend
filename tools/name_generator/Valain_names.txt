@@ -1,0 +1,10 @@
+Warrior Bravery Mighty
+Hunter Bravery Mighty
+Warrior Honor Mighty
+Warrior Wisdom Mighty
+Sentinel Honor Mighty
+Sentinel Wisdom Fierce
+Hunter Wisdom Fierce
+Hunter Wisdom Swift
+Sentinel Honor Fierce
+Warrior Bravery Fierce
