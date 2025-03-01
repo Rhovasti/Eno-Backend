@@ -1,0 +1,7 @@
+neo4j==5.15.0
+py2neo==2021.2.3
+dspy-ai==2.1.10
+pandas==2.1.0
+numpy==1.26.0
+python-dotenv==1.0.0
+requests==2.31.0
