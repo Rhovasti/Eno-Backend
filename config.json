@@ -1,19 +1,19 @@
 {
   "server": {
     "host": "0.0.0.0",
-    "port": 5000,
+    "port": 5001,
     "webhook_token": "eno_webhook_secret_token"
   },
   "api": {
-    "base_url": "http://localhost:3000/",
+    "base_url": "http://95.217.21.111:3000/",
     "email": "admin@example.com",
-    "password": "your_password_here",
+    "password": "admin123",
     "polling_interval": 60
   },
   "llm": {
     "service": "openai",
     "model": "gpt-3.5-turbo",
-    "api_key": "your_openai_api_key_here"
+    "api_key": "your-openai-api-key-here"
   },
   "vector_db": {
     "path": "./narrative_db",

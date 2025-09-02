@@ -1,0 +1,192 @@
+{
+  "templates": {
+    "game_intro": {
+      "name": "Game Introduction",
+      "description": "Creates immersive game world introductions",
+      "system_prompt": "You are a master storyteller and game master for tabletop RPGs. Your task is to create immersive, engaging narratives that draw players into the game world. Focus on atmosphere, themes, and hooks that make players want to explore and interact.",
+      "user_template": "Create a compelling narrative introduction for a new tabletop RPG game:\n\nGame Name: {game_name}\nDescription: {description}\nGenre: {genre}\nThemes: {themes}\nTone: {tone}\nWorld Setting: {world_setting}\n\nLore Context:\n{lore_context}\n\nRequirements:\n- Write an engaging introduction that sets the stage for this game world\n- Incorporate established lore and world details naturally\n- Include key themes, conflicts, and atmosphere\n- Create a sense of mystery and adventure\n- End with a hook that excites players to begin\n- Length: 500-1000 words\n- Style: {style}\n\nMake the narrative immersive and cinematic, using vivid descriptions and emotional resonance while respecting established world lore.",
+      "variables": ["game_name", "description", "genre", "themes", "tone", "world_setting", "style", "lore_context"],
+      "max_tokens": 2000,
+      "temperature": 0.8,
+      "examples": [
+        {
+          "input": {
+            "game_name": "Shadows of Eldoria",
+            "genre": "Dark Fantasy",
+            "themes": "corruption, redemption, sacrifice"
+          },
+          "output": "The kingdom of Eldoria was once a beacon of light..."
+        }
+      ]
+    },
+    "chapter_intro": {
+      "name": "Chapter Introduction",
+      "description": "Transitions between major story arcs",
+      "system_prompt": "You are a narrative designer crafting chapter transitions in an ongoing RPG campaign. Build on established lore while introducing new elements. Create smooth transitions that maintain continuity.",
+      "user_template": "Create a chapter introduction for an ongoing game:\n\n{context}\n\nChapter Title: {chapter_title}\nDescription: {chapter_description}\nSetting: {setting}\nGoals: {goals}\nKey Characters: {key_characters}\n\nPrevious Context:\n{previous_context}\n\nRequirements:\n- Bridge from previous events to new chapter\n- Introduce setting and atmosphere\n- Present key characters naturally\n- Establish chapter goals and conflicts\n- Create anticipation for upcoming events\n- Length: 300-600 words\n\nWrite cinematically, focusing on sensory details and emotional stakes.",
+      "variables": ["context", "chapter_title", "chapter_description", "setting", "goals", "key_characters", "previous_context"],
+      "max_tokens": 1500,
+      "temperature": 0.7
+    },
+    "beat_narrative": {
+      "name": "Narrative Beat",
+      "description": "Individual scene narratives",
+      "system_prompt": "You are directing a scene in an interactive narrative. Create dynamic moments that invite player participation while advancing the story.",
+      "user_template": "Create a narrative beat for the current scene:\n\n{context}\n\nBeat Title: {beat_title}\nDescription: {beat_description}\nMood: {mood}\nLocation Details: {location_details}\nCharacter Dynamics: {character_dynamics}\nImmediate Goals: {goals}\n\nKnowledge Graph Context:\n{kg_context}\n\nVector Memory Context:\n{vector_context}\n\nLore Context:\n{lore_context}\n\nRequirements:\n- Set the scene with atmospheric details respecting world lore\n- Show character interactions and tensions\n- Progress toward beat goals\n- Create decision points for players\n- End with situation requiring response\n- Incorporate relevant lore naturally into the narrative\n- Length: 300-500 words\n- Maintain {mood} mood throughout\n\nFocus on show-don't-tell, using action and dialogue to reveal information while maintaining consistency with established world lore.",
+      "variables": ["context", "beat_title", "beat_description", "mood", "location_details", "character_dynamics", "goals", "kg_context", "vector_context", "lore_context"],
+      "max_tokens": 1200,
+      "temperature": 0.7
+    },
+    "gm_response": {
+      "name": "GM Response",
+      "description": "Reactive responses to player actions",
+      "system_prompt": "You are a responsive game master reacting to player actions. Acknowledge player choices, show consequences, and keep the narrative moving forward. Be fair but maintain dramatic tension.",
+      "user_template": "Generate a GM response to player action:\n\n{context}\n\nPlayer Action: {player_action}\nCharacter Name: {character_name}\nCurrent Scene: {scene_description}\n\nRelated Knowledge:\n{kg_context}\n\nRecent Narrative:\n{vector_context}\n\nRequirements:\n- Acknowledge the player's action\n- Show immediate consequences\n- Reveal new information or complications\n- Maintain narrative consistency\n- Set up next decision point\n- Length: 200-400 words\n\nReact dynamically while respecting established facts and maintaining story coherence.",
+      "variables": ["context", "player_action", "character_name", "scene_description", "kg_context", "vector_context"],
+      "max_tokens": 1000,
+      "temperature": 0.6
+    },
+    "npc_dialogue": {
+      "name": "NPC Dialogue",
+      "description": "Character voice and interaction",
+      "system_prompt": "You are voicing a non-player character in an RPG. Give them personality, motivations, and authentic dialogue that serves the narrative.",
+      "user_template": "Generate NPC dialogue:\n\n{context}\n\nNPC Name: {npc_name}\nNPC Description: {npc_description}\nNPC Personality: {npc_personality}\nCurrent Situation: {situation}\nPlayer Statement/Question: {player_input}\n\nNPC Knowledge:\n{npc_knowledge}\n\nNPC Goals:\n{npc_goals}\n\nRequirements:\n- Stay in character\n- Respond naturally to player input\n- Reveal information appropriately\n- Show personality through speech patterns\n- Include relevant actions/gestures\n- Length: 100-300 words\n\nMake the NPC feel like a real person with their own agenda and perspective.",
+      "variables": ["context", "npc_name", "npc_description", "npc_personality", "situation", "player_input", "npc_knowledge", "npc_goals"],
+      "max_tokens": 800,
+      "temperature": 0.8
+    },
+    "scene_description": {
+      "name": "Scene Description",
+      "description": "Environmental and atmospheric descriptions",
+      "system_prompt": "You are painting vivid scenes for an RPG. Create immersive environments that engage all senses and establish mood.",
+      "user_template": "Describe the following scene:\n\n{context}\n\nLocation: {location}\nTime: {time_of_day}\nWeather/Conditions: {conditions}\nMood: {mood}\nNotable Features: {features}\n\nRecent Events Here:\n{recent_events}\n\nRequirements:\n- Engage multiple senses (sight, sound, smell, touch)\n- Establish atmosphere and mood\n- Include interactive elements players might notice\n- Hint at potential dangers or opportunities\n- Length: 150-300 words\n\nCreate a living environment that feels dynamic and reactive.",
+      "variables": ["context", "location", "time_of_day", "conditions", "mood", "features", "recent_events"],
+      "max_tokens": 800,
+      "temperature": 0.7
+    },
+    "action_outcome": {
+      "name": "Action Outcome",
+      "description": "Results of player actions and decisions",
+      "system_prompt": "You are determining and narrating the outcomes of player actions. Be fair, logical, and dramatic. Success and failure should both lead to interesting story developments.",
+      "user_template": "Narrate the outcome of this action:\n\n{context}\n\nAction Attempted: {action}\nCharacter Skills: {skills}\nDifficulty: {difficulty}\nRoll Result: {roll_result}\nEnvironmental Factors: {factors}\n\nRequirements:\n- Describe the immediate result\n- Show ripple effects if applicable\n- Maintain cause-and-effect logic\n- Create new opportunities or complications\n- Keep the story moving forward\n- Length: 150-300 words\n\nMake outcomes feel earned and consequential.",
+      "variables": ["context", "action", "skills", "difficulty", "roll_result", "factors"],
+      "max_tokens": 800,
+      "temperature": 0.6
+    },
+    "world_lore": {
+      "name": "World Lore",
+      "description": "Background information and world-building",
+      "system_prompt": "You are a loremaster revealing the deep history and secrets of the game world. Provide rich background that enhances immersion without overwhelming players.",
+      "user_template": "Provide lore about:\n\n{context}\n\nTopic: {topic}\nRelevance: {relevance}\nPlayer Knowledge Level: {knowledge_level}\nDesired Detail: {detail_level}\n\nExisting Lore:\n{existing_lore}\n\nRequirements:\n- Maintain consistency with established facts\n- Add depth without contradicting canon\n- Make it relevant to current situation\n- Include hooks for further exploration\n- Length: 200-400 words\n\nWeave lore naturally into the narrative context.",
+      "variables": ["context", "topic", "relevance", "knowledge_level", "detail_level", "existing_lore"],
+      "max_tokens": 1000,
+      "temperature": 0.7
+    },
+    "player_memory": {
+      "name": "Player Memory Recall",
+      "description": "Recalling past events for continuity",
+      "system_prompt": "You are helping players remember important past events and connections. Provide clear, relevant summaries that maintain narrative continuity.",
+      "user_template": "Recall relevant memories:\n\nCurrent Situation: {situation}\nMemory Query: {query}\nTime Frame: {timeframe}\n\nVector Memory Results:\n{memories}\n\nKnowledge Graph Connections:\n{connections}\n\nRequirements:\n- Summarize relevant past events\n- Highlight important connections\n- Clarify timeline if needed\n- Emphasize actionable information\n- Length: 150-300 words\n\nHelp players connect past and present narratively.",
+      "variables": ["situation", "query", "timeframe", "memories", "connections"],
+      "max_tokens": 800,
+      "temperature": 0.5
+    },
+    "conflict_escalation": {
+      "name": "Conflict Escalation",
+      "description": "Raising stakes and tension",
+      "system_prompt": "You are escalating dramatic tension in the narrative. Introduce complications that challenge players without feeling unfair or arbitrary.",
+      "user_template": "Escalate the current conflict:\n\n{context}\n\nCurrent Conflict: {conflict}\nStakes: {stakes}\nPlayer Resources: {resources}\nEscalation Level: {level}\n\nRequirements:\n- Raise stakes organically\n- Introduce new complications\n- Maintain player agency\n- Create difficult choices\n- Build toward climax\n- Length: 200-400 words\n\nMake escalation feel inevitable yet surprising.",
+      "variables": ["context", "conflict", "stakes", "resources", "level"],
+      "max_tokens": 1000,
+      "temperature": 0.7
+    }
+  },
+  "style_modifiers": {
+    "dramatic": {
+      "instructions": "Use heightened emotions, powerful imagery, and weighty consequences. Focus on character struggles and moral dilemmas.",
+      "vocabulary": "grand, fate, destiny, struggle, triumph, sacrifice",
+      "tone": "serious, intense, emotionally charged"
+    },
+    "comedic": {
+      "instructions": "Include humor, irony, and absurdity. Use timing and unexpected juxtapositions. Keep stakes real but approach light.",
+      "vocabulary": "ridiculous, absurd, hilarious, awkward, unexpected",
+      "tone": "light, playful, irreverent"
+    },
+    "horror": {
+      "instructions": "Build dread and unease. Use sensory details that disturb. Leave things partially revealed. Focus on vulnerability.",
+      "vocabulary": "writhing, ancient, forgotten, whispers, shadows, corrupted",
+      "tone": "ominous, unsettling, tense"
+    },
+    "mystery": {
+      "instructions": "Layer clues and red herrings. Reveal information gradually. Focus on questions more than answers.",
+      "vocabulary": "enigmatic, hidden, revealed, suspicious, cryptic",
+      "tone": "intriguing, thoughtful, suspicious"
+    },
+    "epic": {
+      "instructions": "Think grand scale and legendary deeds. Reference mythology and heroes. Make everything larger than life.",
+      "vocabulary": "legendary, mythic, ancient, prophecy, chosen, eternal",
+      "tone": "grandiose, inspiring, mythological"
+    },
+    "noir": {
+      "instructions": "Use cynical observations and moral ambiguity. Everyone has secrets. Focus on corruption and hard choices.",
+      "vocabulary": "shadows, smoke, betrayal, cynical, corrupt, dame",
+      "tone": "cynical, gritty, pessimistic"
+    },
+    "whimsical": {
+      "instructions": "Embrace wonder and imagination. Logic is flexible. Focus on delight and surprise.",
+      "vocabulary": "peculiar, delightful, curious, enchanted, fanciful",
+      "tone": "playful, imaginative, lighthearted"
+    },
+    "gritty": {
+      "instructions": "Focus on harsh realities and difficult survival. Nothing comes easy. Emphasize wear, damage, and scarcity.",
+      "vocabulary": "scarred, worn, desperate, survival, harsh, unforgiving",
+      "tone": "realistic, harsh, uncompromising"
+    }
+  },
+  "context_integration": {
+    "knowledge_graph": {
+      "character_depth": 3,
+      "location_connections": 2,
+      "event_history": 5,
+      "relationship_web": true
+    },
+    "vector_memory": {
+      "relevance_threshold": 0.7,
+      "max_memories": 10,
+      "recency_weight": 0.3,
+      "importance_weight": 0.7
+    },
+    "narrative_consistency": {
+      "fact_checking": true,
+      "continuity_validation": true,
+      "character_voice_consistency": true,
+      "world_rules_enforcement": true
+    }
+  },
+  "generation_parameters": {
+    "default": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "frequency_penalty": 0.3,
+      "presence_penalty": 0.3
+    },
+    "creative": {
+      "temperature": 0.9,
+      "top_p": 0.95,
+      "frequency_penalty": 0.5,
+      "presence_penalty": 0.5
+    },
+    "consistent": {
+      "temperature": 0.5,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "presence_penalty": 0.2
+    },
+    "factual": {
+      "temperature": 0.3,
+      "top_p": 0.8,
+      "frequency_penalty": 0.1,
+      "presence_penalty": 0.1
+    }
+  }
+}
